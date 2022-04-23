@@ -1,13 +1,9 @@
 <!DOCTYPE html5>
-
 <html>
-  <header>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width , initial-scale = 1.0" />
-
-    <title>You & Me</title>
-
-    <link rel="stylesheet" href="style.css" />
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
     <!--official Bootstrap CDN-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -15,434 +11,54 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <!--bootstrap js components -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
     <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
-  </header>
-
-  <style>
-    h1,
-    h3,
-    h4,
-    p {
-      font-family: cursive;
-    }
-    @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-    @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-    .snip1512 {
-      font-family: "Lato", Arial, sans-serif;
-      float: left;
-      border-radius: 10px;
-      position: relative;
-      overflow: hidden;
-      margin: 30px;
-      min-width: 230px;
-      max-width: 300px;
-      max-height: 400px;
-      width: 100%;
-      color: #000000;
-      text-align: left;
-      font-size: 16px;
-      background-color: #1a1a1a;
-      line-height: 1.2em;
-    }
-
-    .snip1512 *,
-    .snip1512 *:before,
-    .snip1512 *:after {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all 0.25s linear;
-      transition: all 0.25s linear;
-    }
-
-    .snip1512 img {
-      width: 100%;
-      vertical-align: top;
-    }
-
-    .snip1512 figcaption {
-      position: absolute;
-      bottom: 0%;
-      width: 100%;
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-      padding: 10px 20px;
-      background-color: #ffffff;
-      -webkit-transition-delay: 0.3s;
-      transition-delay: 0.3s;
-    }
-
-    .snip1512 h3,
-    .snip1512 p {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-      opacity: 0;
-      margin: 0;
-      padding: 0;
-      -webkit-transition-delay: 0.3s;
-      transition-delay: 0.3s;
-    }
-
-    .snip1512 h3 {
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .snip1512 p {
-      font-weight: 400;
-      font-size: 0.9em;
-    }
-
-    .snip1512 i {
-      position: absolute;
-      color: #fff;
-      font-size: 34.11764706px;
-      line-height: 58px;
-      width: 58px;
-      bottom: 0;
-      right: 0;
-      background-color: #e67e22;
-      text-align: center;
-      -webkit-transform: translateX(58px);
-      transform: translateX(58px);
-    }
-
-    .snip1512 a {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .snip1512:hover img,
-    .snip1512.hover img {
-      zoom: 1;
-      filter: alpha(opacity=30);
-      -webkit-opacity: 0.3;
-      opacity: 0.3;
-      -webkit-transform: translateY(-40px);
-      transform: translateY(-40px);
-    }
-
-    .snip1512:hover figcaption,
-    .snip1512.hover figcaption,
-    .snip1512:hover h4,
-    .snip1512.hover h4,
-    .snip1512:hover p,
-    .snip1512.hover p {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .snip1512:hover figcaption,
-    .snip1512.hover figcaption {
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s;
-    }
-
-    .snip1512:hover h4,
-    .snip1512.hover h4 {
-      -webkit-transition-delay: 0.3s;
-      transition-delay: 0.3s;
-    }
-
-    .snip1512:hover p,
-    .snip1512.hover p {
-      -webkit-transition-delay: 0.45s;
-      transition-delay: 0.45s;
-      opacity: 0.5;
-    }
-
-    .snip1512:hover i,
-    .snip1512.hover i {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      -webkit-transition-delay: 0.3s;
-      transition-delay: 0.3s;
-    }
-
-    @import url(https://fonts.googleapis.com/css?family=Roboto:100,700;);
-    .snip1585 {
-      color: #fff;
-      display: inline-block;
-      font-family: "Roboto", sans-serif;
-      font-size: 18px;
-      margin: 10px;
-      max-width: 105px;
-      min-width: 100px;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      width: 100%;
-    }
-
-    .snip1585 * {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all 0.45s ease;
-      transition: all 0.45s ease;
-    }
-
-    .snip1585:before,
-    .snip1585:after {
-      background-color: pink;
-      border-radius: 50%;
-
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      content: "";
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      z-index: 1;
-      opacity: 0;
-    }
-
-    .snip1585:before {
-      -webkit-transform: scaleY(2);
-      transform: scaleY(2);
-    }
-
-    .snip1585:after {
-      -webkit-transform: scaleY(2);
-      transform: scaleY(2);
-    }
-
-    .snip1585 img {
-      vertical-align: top;
-      max-width: 100%;
-      backface-visibility: hidden;
-    }
-
-    .snip1585 figcaption {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      align-items: center;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      opacity: 0;
-      z-index: 2;
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s;
-    }
-
-    .snip1585 h3 {
-      font-size: 1em;
-      font-weight: 400;
-      letter-spacing: 1px;
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    .snip1585 a {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 3;
-    }
-
-    .snip1585:hover > img,
-    .snip1585.hover > img {
-      opacity: 0.7;
-    }
-
-    .snip1585:hover:before,
-    .snip1585.hover:before,
-    .snip1585:hover:after,
-    .snip1585.hover:after {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    .snip1585:hover figcaption,
-    .snip1585.hover figcaption {
-      opacity: 1;
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s;
-    }
-  </style>
-  <body background="small_size_bg.png">
-    <section class="container-fluid mx-10 my-5">
-      <h1 style="text-align: center">
-        <p>You & Me</p>
-        <div style="margin: 0 auto; width: 40%; display: block"></div>
-        <figure class="snip1585">
-          <img
-            src="image\chitsone1.jpg"
-            alt="image unavailiable"
-            style="border-radius: 50%; width: 100px"
-          />
-          <figcaption>
-            <h3>You</h3>
-          </figcaption>
-          
-        </figure>
-        <figure class="snip1585">
-          <img
-            src="image\me1.jpg"
-            alt="image unavailiable"
-            style="border-radius: 50%; width: 100px"
-          />
-          <figcaption>
-            <h3>Me</h3>
-          </figcaption>
-         
-        </figure>
-        </h1></div>
-        
-      </h1>
-      <div style="margin-left: 45px">
-        <figure class="snip1512">
-          <img src="image\chitsone4.jpg" alt="image unavailiable" />
-          <figcaption>
-            <h4>စိမ်းလန်းနေတဲ့ တောအုပ်ထဲမှာ</h4>
-            <p>
-              သုံးထပ်ရေတံခွန်က ရေလေးတွေ စီးဆင်းနေတယ်။ ရွှေအိုရောင် ချစ်စရာ
-              သစ်ရွက်လေးတွေက ကြွေကျနေတယ်။ ရေတံခွန်ဘေး တစ်နေရာမှာ
-              ကောင်မလေးနှစ်ယောက် ရှိတယ်။💫 အဝါရောင် ကောင်မလေးရဲ့
-              မသပ်မရပ်ဖြစ်နေတဲ့ အင်္ကျီ အနားကို ပန်းရောင်ကောင်မလေးက သပ်ရပ်အောင်
-              ပြင်ပေးနေတယ်💕။
-            </p>
-          </figcaption>
-          <i class="ion-plus"></i>
-        </figure>
-
-        <figure class="snip1512">
-          <img src="image\chitsone2.jpg" alt="image unavailiable" />
-          <figcaption>
-            <h4>ကောင်ကင်းကြီးက ပြာလဲ့နေပြီး</h4>
-            <p>
-              လေတဖြူးဖြူးတိုက်နေတဲ့ တောင်ပေါာမြိုလေးရဲ့တစ်နေရာမှာ
-              ကိုယ်သဘောကျတဲ့သူနဲ့ စကားစမြည်ပြောနေရတာလောက် ပျော်စရာကောင်းတာ
-              သက်သောင့်သက်သာဖြစ်တာ ဘာရှိဦးမလဲ❣️🌱🤗။ ငါတို
-              ဘာအကြောင်းတွေပြောနေတာလဲ သေချာမမှတ်မိတော့ဖူး။ ဒါပေမဲ့
-              ငါအရမ်းပျော်နေတာကိုတော့ မှတ်မိတယ်💕။
-            </p>
-          </figcaption>
-          <i class="ion-plus"></i>
-        </figure>
-
-        <figure class="snip1512">
-          <img src="image\chitsone6.jpeg" alt="image unavailiable" />
-          <figcaption>
-            <h4>organge farm မှာ သရဲရှိတဲ့ အိမ်သာ</h4>
-            <p>
-              ကအပြန် ငါ့ရဲ့ ကင်းမြှီးကောက်လိုလို ငါးရှဉ့်လိုလိုဖြစ်နေတဲ့
-              ရှေ့ဆံပင်နှစ်ဖက်ကို သပ်ရပ်အောင်လုပ်ပေးနေတဲ့ပုံလေး ကို snap
-              ရိုက်မိတယ်။ အဲ့အချိန်တုံးက‌ေတာ့ သေချာသတိမထားမိပေမဲ့
-              ခုပြန်ကြည့်တော့ ဒီsnapလေး‌ကိုလည်း သဘောကျတယ်။💫❣️🥺
-            </p>
-          </figcaption>
-          <i class="ion-plus"></i>
-        </figure>
-
-        <figure class="snip1512">
-          <img src="image\chitsone7.jpg" alt="image unavailiable" />
-          <figcaption>
-            <h4>ဒီပုံလေးကို မှတ်မိတယ်မလားဟင်</h4>
-            <p>
-              တီယုက ဓာတ်ပုံရိုက်ပေးရင်း ငါတိုကို မေးလိုက်တာလေ '
-              သမီးတိုနှစ်ယောက်က ဓာတ်ပုံရိုက်ပါမယ်လို ဘာလိုလက်တွဲထားတာလဲ မသိရင်
-              အတွဲတွေကျနေတာပဲ' ဆိုပြီး😗💕
-            </p>
-          </figcaption>
-          <i class="ion-plus"></i>
-        </figure>
-
-        <figure class="snip1512">
-          <img src="image\chitsone5.jpg" alt="image unavailiable" />
-          <figcaption>
-            <h4>28 February 2022 </h4>
-            <p>
-              Sleepover Day❣️🌱🤗
-            </p>
-          </figcaption>
-          <i class="ion-plus"></i>
-        </figure>
-        
-        <figure class="snip1512">
-          <img src="image\chitsone3.jpg" alt="image unavailiable" />
-          <figcaption>
-            <h4>သုံးထပ်ရေတံခွန် ဘုန်းကြီးကျောင်း</h4>
-            <p>
-              သွားတဲ့နေ့တည်းက အ၀တ်အစား ဆင်တူလေး ၀တ်ချင်တာ🥺 ‌‌ဒီနေ့တော့ ငါတို
-              ဂါ၀န်ဆင်တူလေး ၀တ်ရပြီ ငါတိုနှစ်ယောက်လုံး ချစ်စရာလေး🥺💫💕
-            </p>
-          </figcaption>
-          <i class="ion-plus"></i>
-        </figure>
-      </div></section>
-      <div class="center margin: 30px;" style="text-align: center">
-        <video width="400" height="240" style="margin: 10px" controls>
-          <source src="image\our_memory.mp4" type="video/mp4" />
-          This browser does not support the video tag.
-        </video>
-      </div>
-    <div
-          class="center card mx-auto text-center justify-content-center"
-          style="text-align: center; width: auto;"
-        >
-          <table>
-            <tr>
-              <td>
-                <img
-                  src="image\our_memory.jpg"
-                  alt="image unavailiable"
-                  style="width: 250px; height: auto"
-                />
-              </td>
-                  <td style="text-align: center;">💕စတွေ့တည်းက စကားအများကြီးမ‌ေပြာပဲ အေးအေးလေးနဲ့ တည်ငြိမ်‌ေနပြီး ကြည်လင်နေတဲ့ မျက်နှာလေး ကို သဘောကျတယ်....
-ငါတွေးလိုက်တယ် ... "Pont က ငါနဲ့ တူသားပဲလို💫"
-💕အပြင်ပန်းက ကြည့်ရင် အေးသလိုထင်ရပြီး
-စကားအများကြီး ‌မပြောပဲ တည်ငြိမ်တဲ့ ကောင်မလေး
-💕ကလေးလေးတွေ တိရိစ္ဆာန်လေးတွေ ချစ်တတ်တဲ့ စိတ်ထားကောင်းတဲ့ ကောင်မလေးတစ်ယောက်💫
-💕ပါးချိုင့်လေးတွေ ခွက်၀င်အောင် ပြုံးလိုက်တိုင်း မျက်လုံးလေးတွေမှိတ်သွားပြီး ဖြူစင်တဲ့ ကလေးလေးတစ်ယောက်လို ချစ်စရာကောင်းတဲ့ ကောင်မလေး💫
-💕အချိန်တွေ တူတူ ကုန်ဆုံးရတာကို ပျော်တယ် ...
-ညဖက်ကြီး မအိပ်နဲ့ အကြောင်းအရင်းမဲ့ သုံးယောက်သားထိုင်ရယ်နေရတာကိုလည်းပျော်တယ်💫
-L💕စတွေ့တုံးက ခင်ချင်တယ်
-💕နောက် တဖြည်းဖြည်း ပိုပြီး သဘောကျလာတယ်
-💕ပြီး‌ေတာ့ တဖြည်းဖြည်းချစ်လာတယ်
-💕နေ့တိုင်း တနေ့ထက်တနေ့ ပိုချစ်လာတယ် ချစ်ဆုံးရယ် :3🥺💫💕</td>
-            </tr>
-          </table>
+    <main class="center my-auto mx-autoo">
+      <h3 style="text-align: center; color: wheat">Login Page</h3>
+      <form
+        id="form"
+        action="post"
+        class="col-4 center mx-auto my-auto px-auto py-auto"
+      >
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" id="username" class="form-control" />
         </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" id="password" class="form-control" />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-outline-success btn-lg shadow my-2"
+          onClick="auth(event)"
+        >
+          Submit
+        </button>
+      </form>
+    </main>
   </body>
-
   <footer>
     <h4 style="text-align: center; color: wheat">
       &copy; 2022, Created By May Phyu Sin Thant
     </h4>
   </footer>
 </html>
+<script>
+  function auth(event) {
+    event.preventDefault();
+
+    var uname = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (uname === "crystal101" && password === "sparkle404") {
+      window.location.replace("data.html");
+    } else {
+      alert("Invalid information");
+      return;
+    }
+  }
+</script>
